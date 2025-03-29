@@ -8,12 +8,12 @@ import { Suspense } from 'react';
 const HomePage = () => {
   return (
     <div className='flex justify-center items-center h-screen'>
-      <Canvas>
+      <Canvas camera={{position: [-200, 0, 0]}}>
         <OrbitControls />
           <ambientLight intensity={0.5} />
           <directionalLight position={[-2, 5, 2]} intensity={1} />
           <Suspense fallback={null}>
-            <Model modelPath="/models/Red_Fighter/Red_Fighter.fbx" />
+            <Model modelPath="/models/Red_Fighter/Red_Ship.fbx" />
           </Suspense>
       </Canvas>
     </div>
